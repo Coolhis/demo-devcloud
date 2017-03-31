@@ -1,0 +1,1 @@
+{"virtualbox":{"/etc/ansible":{"mount_options":["fmode=666"],"guestpath":"/etc/ansible","hostpath":"D:/SDATDev/ansible","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"D:/SDATDev","disabled":false,"__vagrantfile":true}}}

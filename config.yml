@@ -1,0 +1,11 @@
+devcloud:
+    # Memmory for VirtualBox
+    virtualbox_memory: 2048
+
+    # Number of CPSu for VirtualBox
+    virtualbox_cpus: 2
+
+    # Shared folders
+    share: []
+        #demo:
+            #path: '../path'

@@ -1,0 +1,8 @@
+---
+
+- name: DevCloud
+  hosts: devcloud
+  roles:
+    - common
+    - java
+    - maven

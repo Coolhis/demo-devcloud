@@ -1,0 +1,2 @@
+[devcloud]
+devcloud ansible_connection=local

@@ -1,0 +1,21 @@
+---
+
+- name: Create message of the day
+  template: src=motd-{{ server_hostname|default(inventory_hostname_short) }}.j2 dest=/etc/motd
+
+- name: Set server hostname
+  hostname: name={{ server_hostname|default(inventory_hostname_short) }}
+  tags: hosts
+
+- name: Set timezone to UTC
+  file: src=/usr/share/zoneinfo/UTC dest=/etc/localtime state=link force=yes
+
+- name: Update apt cache
+  apt: update_cache=yes cache_valid_time={{ apt_cache_valid_time }}
+
+- name: Install base packages
+  apt: name={{ item }} state=present
+  with_items:
+    - curl
+    - git
+    - vim
